@@ -27,29 +27,27 @@ void loop() {
     serial1 = 1;
   }
   Serial.print(serial1);
-  Serial.print(",");
-  // The ultrasonic sensor 2
-  long duration2, inches2, cm2;
-  int serial2;
-  pinMode(pingPin2, OUTPUT);
-  digitalWrite(pingPin2, LOW);
-  delayMicroseconds(10);
-  digitalWrite(pingPin2, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(pingPin2, LOW);
-  pinMode(echoPin2, INPUT);
-  duration2 = pulseIn(echoPin2, HIGH);
-  inches2 = microsecondsToInches(duration2);
-  cm2 = microsecondsToCentimeters(duration2);
-  if (cm2 >= 60) {
-    serial2 = 0;
-  } else {
-    serial2 = 1;
-  }
-  Serial.print(serial2);
+//  Serial.print(",");
+//  // The ultrasonic sensor 2
+//  long duration2, inches2, cm2;
+//  int serial2;
+//  pinMode(pingPin2, OUTPUT);
+//  digitalWrite(pingPin2, LOW);
+//  delayMicroseconds(10);
+//  digitalWrite(pingPin2, HIGH);
+//  delayMicroseconds(10);
+//  digitalWrite(pingPin2, LOW);
+//  pinMode(echoPin2, INPUT);
+//  duration2 = pulseIn(echoPin2, HIGH);
+//  inches2 = microsecondsToInches(duration2);
+//  cm2 = microsecondsToCentimeters(duration2);
+//  if (cm2 >= 60) {
+//    serial2 = 0;
+//  } else {
+//    serial2 = 1;
+//  }
+//  Serial.print(serial2);
   Serial.println(",");
-  byte msg[1];
-  msg[0] = serial1;
   delay(250);
 }
 
