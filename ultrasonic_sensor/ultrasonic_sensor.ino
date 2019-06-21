@@ -21,7 +21,7 @@ void loop() {
   duration1 = pulseIn(echoPin1, HIGH);
   inches1 = microsecondsToInches(duration1);
   cm1 = microsecondsToCentimeters(duration1);
-  if (cm1 >= 60) {
+  if (cm1 >= 150) {
     serial1 = 0;
   } else {
     serial1 = 1;
