@@ -1,8 +1,18 @@
 #include <CapacitiveSensor.h>
 // CapacitiveSensor cs_7_8 = CapacitiveSensor(7,8); //10M Resistor between pins 7 and 8, you may also connect an antenna on pin 8
 
-CapacitiveSensor sensors[] = {CapacitiveSensor(7,8), CapacitiveSensor(9,10)};
-int numSensors = 2;
+CapacitiveSensor sensors[] = {
+  CapacitiveSensor(2,3),
+  CapacitiveSensor(4,5),
+  CapacitiveSensor(6,7),
+  CapacitiveSensor(8,9),
+  CapacitiveSensor(10,11),
+  CapacitiveSensor(12,13),
+  CapacitiveSensor(A5, A4),
+  CapacitiveSensor(A3, A2),
+  CapacitiveSensor(A1, A0)
+  };
+int numSensors = 9;
 
 int sensorLimit = 50;
 int sensorResolution = 50;
