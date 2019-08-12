@@ -11,7 +11,7 @@ CapacitiveSensor sensors[] = {
   CapacitiveSensor(A5, A4),
   CapacitiveSensor(A3, A2),
   CapacitiveSensor(A1, A0)
-  };
+};
 int numSensors = 9;
 
 int sensorLimit = 50;
