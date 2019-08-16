@@ -14,7 +14,7 @@ CapacitiveSensor sensors[] = {
 };
 int numSensors = 9;
 
-int sensorLimit = 50;
+int sensorLimit = 90;
 int sensorResolution = 50;
 
 void setup() {
