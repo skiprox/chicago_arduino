@@ -1,6 +1,6 @@
 #include <CapacitiveSensor.h>
-// CapacitiveSensor cs_7_8 = CapacitiveSensor(7,8); //10M Resistor between pins 7 and 8, you may also connect an antenna on pin 8
 
+// Capacitive Sensor Stuff
 CapacitiveSensor sensors[] = {
   CapacitiveSensor(2,3),
   CapacitiveSensor(4,5),
@@ -13,14 +13,18 @@ CapacitiveSensor sensors[] = {
   CapacitiveSensor(26,27)
 };
 int numSensors = 9;
-
 int sensorLimit = 90;
 int sensorResolution = 50;
+
+// Button Reset Stuff
+int buttonPin = 50;
+int buttonState = 1;
 
 void setup() {
   for (int i = 0; i < numSensors; i++) {
     sensors[i].set_CS_AutocaL_Millis(0xFFFFFFFF);
   }
+  pinMode(buttonPin, INPUT_PULLUP);
   Serial.begin(57600);
 }
 
@@ -36,10 +40,10 @@ void CSread() {
       colorSwitcher = 1;
     }
     Serial.print(colorSwitcher);
-    if (i < numSensors - 1) {
-      Serial.print(",");
-    }
+    Serial.print(",");
   }
+  buttonState = digitalRead(buttonPin);
+  Serial.print(buttonState);
   Serial.println(",");
   delay(200);
 }

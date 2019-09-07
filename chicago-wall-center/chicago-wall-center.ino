@@ -14,14 +14,18 @@ CapacitiveSensor sensors[] = {
   CapacitiveSensor(28,29)
 };
 int numSensors = 10;
-
 int sensorLimit = 90;
 int sensorResolution = 50;
+
+// Button Reset Stuff
+int buttonPin = 50;
+int buttonState = 1;
 
 void setup() {
   for (int i = 0; i < numSensors; i++) {
     sensors[i].set_CS_AutocaL_Millis(0xFFFFFFFF);
   }
+  pinMode(buttonPin, INPUT_PULLUP);
   Serial.begin(57600);
 }
 
@@ -37,10 +41,10 @@ void CSread() {
       colorSwitcher = 1;
     }
     Serial.print(colorSwitcher);
-    if (i < numSensors - 1) {
-      Serial.print(",");
-    }
+    Serial.print(",");
   }
+  buttonState = digitalRead(buttonPin);
+  Serial.print(buttonState);
   Serial.println(",");
   delay(200);
 }
