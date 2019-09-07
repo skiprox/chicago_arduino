@@ -8,9 +8,9 @@ CapacitiveSensor sensors[] = {
   CapacitiveSensor(8,9),
   CapacitiveSensor(10,11),
   CapacitiveSensor(12,13),
-  CapacitiveSensor(22,23),
-  CapacitiveSensor(24,25),
-  CapacitiveSensor(26,27)
+  CapacitiveSensor(A1,A0),
+  CapacitiveSensor(A3,A2),
+  CapacitiveSensor(A5,A4)
 };
 int numSensors = 9;
 int sensorLimit = 90;
